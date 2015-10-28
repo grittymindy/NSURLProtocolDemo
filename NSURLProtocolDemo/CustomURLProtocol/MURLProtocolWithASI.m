@@ -29,7 +29,6 @@
     return request;
 }
 
-
 - (void)startLoading
 {
     self.aRequest = [[ASIHTTPRequest alloc] initWithURL:self.request.URL];
@@ -69,11 +68,7 @@
 
 - (void)stopLoading
 {
-    if (self.aRequest) {
-        self.aRequest.delegate = nil;
-        [self.aRequest cancel];
-        self.aRequest = nil;
-    }
+    [self.aRequest clearDelegatesAndCancel];
 }
 
 
@@ -91,18 +86,20 @@
 
 #pragma mark - ASIHTTPRequestDelegate
 -(void)request:(ASIHTTPRequest *)request willRedirectToURL:(NSURL *)newURL{
-    if (request == self.aRequest && !request.isCancelled) {
-        NSMutableURLRequest* redirectableRequest = [[NSMutableURLRequest alloc]initWithURL:[newURL copy]];
-        redirectableRequest.allHTTPHeaderFields = [self.request allHTTPHeaderFields];
+    NSMutableURLRequest* redirectableRequest = [[NSMutableURLRequest alloc]initWithURL:[newURL copy]];
+    redirectableRequest.allHTTPHeaderFields = [self.request allHTTPHeaderFields];
 
-        [[self client] URLProtocol:self
-            wasRedirectedToRequest:redirectableRequest
-                  redirectResponse:[[NSHTTPURLResponse alloc]
-                                    initWithURL:request.url
-                                    statusCode:request.responseStatusCode
-                                    HTTPVersion:@"HTTP/1.0"
-                                    headerFields:request.responseHeaders]];
-    }
+    [[self client] URLProtocol:self
+        wasRedirectedToRequest:redirectableRequest
+              redirectResponse:[[NSHTTPURLResponse alloc]
+                                initWithURL:request.url
+                                statusCode:request.responseStatusCode
+                                HTTPVersion:@"HTTP/1.0"
+                                headerFields:request.responseHeaders]];
+    
+    //DO NOT call [request redirectToURL:newURL] to resume loading.
+    //A new MURLProtocolWithASI instance will be created for the new URL
+    [request markAsFinished];
 }
 
 @end

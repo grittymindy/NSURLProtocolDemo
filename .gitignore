@@ -1,0 +1,66 @@
+
+*.xcuserstate
+
+Pods/ASIHTTPRequest/Classes/ASIAuthenticationDialog.h
+
+Pods/Target Support Files/Reachability/Reachability-dummy.m
+
+Pods/ASIHTTPRequest/Classes/ASIAuthenticationDialog.m
+
+Pods/ASIHTTPRequest/Classes/ASIDataDecompressor.m
+
+Pods/ASIHTTPRequest/Classes/ASICacheDelegate.h
+
+Pods/ASIHTTPRequest/Classes/ASIDataCompressor.h
+
+Pods/ASIHTTPRequest/Classes/ASIDataCompressor.m
+
+Pods/Target Support Files/Pods/Pods.debug.xcconfig
+
+Pods/Target Support Files/Pods/Pods.release.xcconfig
+
+Pods/Target Support Files/Reachability/Reachability.xcconfig
+
+Pods/Target Support Files/ASIHTTPRequest/ASIHTTPRequest.xcconfig
+
+Pods/Target Support Files/Pods/Pods-dummy.m
+
+Pods/Target Support Files/ASIHTTPRequest/ASIHTTPRequest-prefix.pch
+
+Pods/Target Support Files/Pods/Pods-acknowledgements.markdown
+
+Pods/Reachability/README.md
+
+Pods/Target Support Files/Reachability/Reachability-prefix.pch
+
+Pods/Target Support Files/Pods/Pods-acknowledgements.plist
+
+Pods/Reachability/LICENCE.txt
+
+Pods/Pods.xcodeproj/xcuserdata/baidu.xcuserdatad/xcschemes/Reachability.xcscheme
+
+Pods/Pods.xcodeproj/xcuserdata/baidu.xcuserdatad/xcschemes/ASIHTTPRequest.xcscheme
+
+Pods/Target Support Files/Pods/Pods-resources.sh
+
+Pods/Pods.xcodeproj/project.pbxproj
+
+Pods/Target Support Files/Pods/Pods-frameworks.sh
+
+Pods/Headers/Public/Reachability/Reachability.h
+
+Pods/Pods.xcodeproj/xcuserdata/baidu.xcuserdatad/xcschemes/Pods.xcscheme
+
+Pods/Pods.xcodeproj/xcuserdata/baidu.xcuserdatad/xcschemes/xcschememanagement.plist
+
+Pods/ASIHTTPRequest/Classes/ASIFormDataRequest.m
+
+*.h
+
+*.m
+
+Pods/ASIHTTPRequest/LICENSE
+
+Pods/ASIHTTPRequest/README.textile
+
+Pods/Manifest.lock
